@@ -106,6 +106,8 @@ export const api = {
 
   getGroups: () => request('/groups', { requireAuth: false }),
 
+  getLeaderboard: () => request('/leaderboard', { requireAuth: false }),
+
   getAllResults: () => request('/results'),
   resetResults:  () => request('/results', { method: 'DELETE' }),
   deleteResult:  (id) => request(`/results?id=${id}`, { method: 'DELETE' }),
