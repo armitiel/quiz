@@ -110,7 +110,11 @@ export const api = {
 
   getAllResults: () => request('/results'),
   resetResults:  () => request('/results', { method: 'DELETE' }),
-  deleteResult:  (id) => request(`/results?id=${id}`, { method: 'DELETE' }),
+  // id może być pojedynczym numerem albo tablicą (cała sesja)
+  deleteResult:  (id) => {
+    const param = Array.isArray(id) ? `ids=${id.join(',')}` : `id=${id}`;
+    return request(`/results?${param}`, { method: 'DELETE' });
+  },
 
   getTopPerformers: ({ classLevel = null, percent = 20, dateFrom = null, dateTo = null } = {}) => {
     const params = new URLSearchParams();
@@ -135,17 +139,19 @@ export const api = {
       await loadScript('https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js');
     }
     const XLSX = window.XLSX;
+    // rows to teraz SESJE (jedna gra = jeden wiersz)
     const data = [
-      ['Data', 'Godzina', 'Imię', 'Nazwisko', 'Klasa', 'Grupa', 'Stacja', 'Wynik', 'Maksymalnie', 'Procent'],
+      ['Data', 'Godzina', 'Imię', 'Nazwisko', 'Klasa', 'Grupa', 'Stacji ukończonych', 'Wynik', 'Maksymalnie', 'Procent'],
       ...rows.map((r) => {
         const dt = (r.completed_at || '').split('T');
         const time = (dt[1] || '').slice(0, 8);
         const pct = r.total > 0 ? Math.round((r.score / r.total) * 100) : 0;
+        const stations = r.stations_done ?? 1;
         return [
           dt[0] || '', time,
           r.first_name, r.last_name,
           r.class_level || '', r.group_symbol || '',
-          (r.station_icon ? r.station_icon + ' ' : '') + (r.station_name || 'Brak stacji'),
+          `${stations}/4`,
           r.score, r.total, pct + '%',
         ];
       }),
@@ -153,7 +159,7 @@ export const api = {
     const ws = XLSX.utils.aoa_to_sheet(data);
     ws['!cols'] = [
       { wch: 12 }, { wch: 10 }, { wch: 12 }, { wch: 14 }, { wch: 8 },
-      { wch: 14 }, { wch: 28 }, { wch: 8 }, { wch: 13 }, { wch: 9 },
+      { wch: 14 }, { wch: 18 }, { wch: 8 }, { wch: 13 }, { wch: 9 },
     ];
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Wyniki');

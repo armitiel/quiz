@@ -38,6 +38,17 @@ export default wrap(async (req, res) => {
 
   if (req.method === 'DELETE') {
     if (!requireAdmin(req, res)) return;
+    // ?ids=1,2,3,4 - cała sesja jednym wywołaniem
+    if (req.query.ids) {
+      const ids = String(req.query.ids)
+        .split(',')
+        .map((x) => parseInt(x.trim(), 10))
+        .filter((n) => Number.isInteger(n) && n > 0);
+      if (ids.length === 0) return fail(res, 400, 'BAD_REQUEST', 'Brak prawidłowych id');
+      const data = await rpc('delete_results', [ids]);
+      return ok(res, data);
+    }
+    // ?id=X - pojedynczy wynik (kompatybilność wsteczna)
     const id = req.query.id ? parseInt(req.query.id, 10) : null;
     if (id) {
       const data = await rpc('delete_result', [id]);

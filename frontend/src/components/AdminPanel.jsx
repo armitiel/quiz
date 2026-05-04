@@ -72,10 +72,13 @@ export default function AdminPanel() {
   };
 
   const handleDeleteResult = async (r) => {
-    if (!window.confirm(`Usunąć wynik ${r.first_name} ${r.last_name} (${r.score}/${r.total} z ${r.completed_at})?`)) return;
+    const when = (r.completed_at || '').slice(0, 16).replace('T', ' ');
+    if (!window.confirm(`Usunąć grę ${r.first_name} ${r.last_name} (${r.score}/${r.total} z ${when})?`)) return;
     try {
-      await api.deleteResult(r.id);
-      flash(`✅ Wynik usunięty.`);
+      // Jeśli sesja ma kilka wyników (4 stacje) — usuń wszystkie naraz
+      const ids = Array.isArray(r.result_ids) && r.result_ids.length > 0 ? r.result_ids : r.id;
+      await api.deleteResult(ids);
+      flash(`✅ Gra usunięta.`);
       await loadResults();
     } catch (err) { setError(err); }
   };
@@ -101,11 +104,13 @@ export default function AdminPanel() {
     return true;
   });
 
-  // Statystyki
+  // Statystyki - results to teraz SESJE (jedna gra = jeden wiersz)
   const uniqueUsers = new Set(results.map((r) => r.user_id)).size;
-  const avgScore = results.length > 0
-    ? (results.reduce((s, r) => s + r.score, 0) / results.length).toFixed(1)
-    : '0';
+  const avgPercent = results.length > 0
+    ? Math.round(
+        results.reduce((s, r) => s + (r.total > 0 ? (r.score / r.total) * 100 : 0), 0) / results.length
+      )
+    : 0;
 
   return (
     <div className="card animate-pop-in">
@@ -122,9 +127,9 @@ export default function AdminPanel() {
 
       {/* === STATYSTYKI === */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 my-6">
-        <StatTile value={uniqueUsers}    label="Uczniów" />
-        <StatTile value={results.length} label="Wyników" />
-        <StatTile value={avgScore}       label="Średnia" />
+        <StatTile value={uniqueUsers}      label="Uczniów" />
+        <StatTile value={results.length}   label="Gier" />
+        <StatTile value={`${avgPercent}%`} label="Średni wynik" />
       </div>
 
       {loading ? <Spinner /> : (
@@ -214,7 +219,7 @@ export default function AdminPanel() {
           </Section>
 
           {/* === WSZYSTKIE WYNIKI Z FILTREM I USUWANIEM === */}
-          <Section title="📊 Wszystkie wyniki">
+          <Section title="📊 Wszystkie gry">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
               <Field label="Filtr klasy">
                 <select className="input-kid text-base bg-white"
@@ -232,11 +237,11 @@ export default function AdminPanel() {
             </div>
 
             <p className="text-sm text-ink-muted mb-2">
-              Pokazano <strong>{filteredResults.length}</strong> z <strong>{results.length}</strong> wyników
+              Pokazano <strong>{filteredResults.length}</strong> z <strong>{results.length}</strong> gier
             </p>
 
             {filteredResults.length === 0 ? (
-              <p className="text-center text-ink-muted italic my-4">Brak wyników do wyświetlenia.</p>
+              <p className="text-center text-ink-muted italic my-4">Brak gier do wyświetlenia.</p>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full text-sm md:text-base">
@@ -245,28 +250,37 @@ export default function AdminPanel() {
                       <th className="p-2 text-left">Data</th>
                       <th className="p-2 text-left">Uczeń</th>
                       <th className="p-2 text-left">Klasa</th>
+                      <th className="p-2 text-center">Stacji</th>
                       <th className="p-2 text-right">Wynik</th>
                       <th className="p-2 text-center">Akcja</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {filteredResults.map((r) => (
-                      <tr key={r.id} className="border-b border-forest-100 hover:bg-forest-50">
-                        <td className="p-2 text-ink-muted text-xs md:text-sm">{r.completed_at}</td>
-                        <td className="p-2 font-medium">{r.first_name} {r.last_name}</td>
-                        <td className="p-2 text-xs md:text-sm">{r.class_level || '—'}</td>
-                        <td className="p-2 text-right font-semibold">
-                          {r.score}<span className="text-wood-600"> / {r.total}</span>
-                        </td>
-                        <td className="p-2 text-center">
-                          <button onClick={() => handleDeleteResult(r)}
-                                  title="Usuń wpis testowy"
-                                  className="text-xs px-2 py-1 rounded-pill bg-coral-soft text-[#a8413a] hover:bg-coral hover:text-white transition-colors">
-                            Usuń
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                    {filteredResults.map((r) => {
+                      const when = (r.completed_at || '').slice(0, 16).replace('T', ' ');
+                      const stationsDone = r.stations_done ?? 1;
+                      const incomplete = stationsDone < 4;
+                      return (
+                        <tr key={r.id} className="border-b border-forest-100 hover:bg-forest-50">
+                          <td className="p-2 text-ink-muted text-xs md:text-sm whitespace-nowrap">{when}</td>
+                          <td className="p-2 font-medium">{r.first_name} {r.last_name}</td>
+                          <td className="p-2 text-xs md:text-sm">{r.class_level || '—'}</td>
+                          <td className={`p-2 text-center text-xs md:text-sm ${incomplete ? 'text-coral font-semibold' : 'text-ink-muted'}`}>
+                            {stationsDone}/4{incomplete && ' ⚠️'}
+                          </td>
+                          <td className="p-2 text-right font-semibold">
+                            {r.score}<span className="text-wood-600"> / {r.total}</span>
+                          </td>
+                          <td className="p-2 text-center">
+                            <button onClick={() => handleDeleteResult(r)}
+                                    title={`Usuń tę grę (${stationsDone} stacji)`}
+                                    className="text-xs px-2 py-1 rounded-pill bg-coral-soft text-[#a8413a] hover:bg-coral hover:text-white transition-colors">
+                              Usuń
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

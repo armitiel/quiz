@@ -240,7 +240,9 @@ END;
 $$;
 
 
--- ----- 6. get_all_results -----
+-- ----- 6. get_all_results - zgrupowane w SESJE -----
+-- Sesja = wszystkie wyniki ucznia w odstępie ≤30 min.
+-- Jedna gra (4 stacje × 3 pytania) = jeden wiersz w odpowiedzi.
 CREATE OR REPLACE FUNCTION get_all_results(p_limit INT DEFAULT 500)
 RETURNS jsonb LANGUAGE plpgsql AS $$
 BEGIN
@@ -248,15 +250,37 @@ BEGIN
         'results',
         COALESCE((
             SELECT jsonb_agg(t) FROM (
-                SELECT r.id, r.score, r.total, r.completed_at, r.station_id,
-                       s.name AS station_name, s.icon AS station_icon,
-                       u.id AS user_id, u.first_name, u.last_name, u.class_level,
-                       g.symbol AS group_symbol
-                FROM results r
-                JOIN users u ON u.id = r.user_id
+                WITH ordered AS (
+                    SELECT r.*,
+                           LAG(r.completed_at) OVER (PARTITION BY r.user_id ORDER BY r.completed_at) AS prev_at
+                    FROM results r
+                ),
+                sessioned AS (
+                    SELECT *,
+                           SUM(CASE
+                               WHEN prev_at IS NULL OR (completed_at - prev_at) > INTERVAL '30 minutes'
+                               THEN 1 ELSE 0
+                           END) OVER (PARTITION BY user_id ORDER BY completed_at) AS session_num
+                    FROM ordered
+                )
+                SELECT
+                    -- id sesji = id pierwszego wyniku w sesji (do React keys)
+                    MIN(s.id)::INT AS id,
+                    SUM(s.score)::INT AS score,
+                    SUM(s.total)::INT AS total,
+                    MAX(s.completed_at) AS completed_at,
+                    MIN(s.completed_at) AS started_at,
+                    COUNT(*)::INT AS stations_done,
+                    array_agg(s.id ORDER BY s.completed_at) AS result_ids,
+                    s.user_id,
+                    u.first_name, u.last_name, u.class_level,
+                    g.symbol AS group_symbol
+                FROM sessioned s
+                JOIN users u ON u.id = s.user_id
                 LEFT JOIN groups g ON g.id = u.group_id
-                LEFT JOIN stations s ON s.id = r.station_id
-                ORDER BY r.completed_at DESC LIMIT p_limit
+                GROUP BY s.user_id, s.session_num, u.first_name, u.last_name, u.class_level, g.symbol
+                ORDER BY MAX(s.completed_at) DESC
+                LIMIT p_limit
             ) t
         ), '[]'::jsonb),
         'count', (SELECT COUNT(*) FROM results)
@@ -265,7 +289,8 @@ END;
 $$;
 
 
--- ----- 7. delete_result, delete_all_results -----
+-- ----- 7. delete_result(s), delete_all_results -----
+-- Akceptuje listę id - usuwa całą sesję jednym wywołaniem.
 CREATE OR REPLACE FUNCTION delete_result(p_id INT)
 RETURNS jsonb LANGUAGE plpgsql AS $$
 DECLARE v_count INT;
@@ -273,6 +298,16 @@ BEGIN
     DELETE FROM results WHERE id = p_id;
     GET DIAGNOSTICS v_count = ROW_COUNT;
     RETURN jsonb_build_object('deleted', v_count > 0, 'id', p_id);
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION delete_results(p_ids INT[])
+RETURNS jsonb LANGUAGE plpgsql AS $$
+DECLARE v_count INT;
+BEGIN
+    DELETE FROM results WHERE id = ANY(p_ids);
+    GET DIAGNOSTICS v_count = ROW_COUNT;
+    RETURN jsonb_build_object('deleted', v_count, 'ids', to_jsonb(p_ids));
 END;
 $$;
 
