@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<rect x="385.0" y="480" width="30.0" height="60.0" fill="#5a3a26"/><polygon points="400,210.0 265.0,480 535.0,480" fill="#4d8c2f"/><polygon points="400,150.0 287.5,420.0 512.5,420.0" fill="#6ab04c"/><polygon points="400,105.0 317.5,360.0 482.5,360.0" fill="#4d8c2f"/>
+<!-- szyszki -->
+<g fill="#5a3a26">
+  <ellipse cx="320" cy="320" rx="8" ry="14"/>
+  <ellipse cx="480" cy="280" rx="8" ry="14"/>
+  <ellipse cx="450" cy="380" rx="8" ry="14"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">sosna - drzewo iglaste</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<circle cx="200" cy="200" r="180" fill="#a8e6a3" stroke="#5a3a26" stroke-width="12"/>
+
+<g transform="translate(200,210)">
+  <ellipse cx="0" cy="20" rx="65" ry="100" fill="#d4a574" stroke="#5a3a26" stroke-width="4"/>
+  <ellipse cx="0" cy="-30" rx="80" ry="40" fill="#5a3a26"/>
+  <ellipse cx="0" cy="-30" rx="80" ry="40" fill="none" stroke="#3d2814" stroke-width="3"/>
+  <!-- siateczka czapeczki -->
+  <line x1="-50" y1="-50" x2="-30" y2="-10" stroke="#3d2814" stroke-width="2"/>
+  <line x1="-20" y1="-55" x2="-10" y2="-10" stroke="#3d2814" stroke-width="2"/>
+  <line x1="10" y1="-55" x2="20" y2="-10" stroke="#3d2814" stroke-width="2"/>
+  <line x1="40" y1="-50" x2="35" y2="-10" stroke="#3d2814" stroke-width="2"/>
+  <!-- ogonek -->
+  <line x1="0" y1="-65" x2="-5" y2="-95" stroke="#3d2814" stroke-width="6" stroke-linecap="round"/>
+  <!-- twarzyczka -->
+  <circle cx="-15" cy="40" r="5" fill="#5a3a26"/>
+  <circle cx="15" cy="40" r="5" fill="#5a3a26"/>
+  <path d="M-12,60 Q0,70 12,60" stroke="#5a3a26" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+
+</svg>

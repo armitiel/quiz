@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<rect x="379.0" y="480" width="42.0" height="70.0" fill="#8b5a3c"/><circle cx="400" cy="410.0" r="112.0" fill="#4d8c2f"/><circle cx="330.0" cy="438.0" r="77.0" fill="#6ab04c"/><circle cx="470.0" cy="438.0" r="77.0" fill="#6ab04c"/><circle cx="400" cy="340.0" r="77.0" fill="#6ab04c"/>
+<!-- strzałki tlenu -->
+<g stroke="#ffffff" stroke-width="4" fill="none" opacity="0.9">
+  <path d="M250,300 Q230,260 240,220" marker-end="url(#a)"/>
+  <path d="M540,290 Q560,260 545,210" marker-end="url(#a)"/>
+  <path d="M380,250 Q395,200 385,170" marker-end="url(#a)"/>
+</g>
+<g fill="#ffffff" opacity="0.9">
+  <text x="200" y="200" font-family="Comic Sans MS" font-size="32" font-weight="bold">O₂</text>
+  <text x="510" y="190" font-family="Comic Sans MS" font-size="32" font-weight="bold">O₂</text>
+  <text x="370" y="160" font-family="Comic Sans MS" font-size="32" font-weight="bold">O₂</text>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">drzewo daje tlen</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<rect x="384.0" y="480" width="32.0" height="64.0" fill="#5a3a26"/><polygon points="400,192.0 256.0,480 544.0,480" fill="#4d8c2f"/><polygon points="400,128.0 280.0,416.0 520.0,416.0" fill="#6ab04c"/><polygon points="400,80.0 312.0,352.0 488.0,352.0" fill="#4d8c2f"/>
+<!-- iglaki spadają -->
+<g fill="#4d8c2f">
+  <line x1="200" y1="450" x2="206" y2="465" stroke="#4d8c2f" stroke-width="3"/>
+  <line x1="600" y1="430" x2="595" y2="445" stroke="#4d8c2f" stroke-width="3"/>
+  <line x1="170" y1="500" x2="180" y2="510" stroke="#4d8c2f" stroke-width="3"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">świerk - drzewo iglaste</text>
+</svg>

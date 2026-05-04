@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/><rect x="113.0" y="380" width="14.0" height="28.0" fill="#5a3a26"/><polygon points="120,254.0 57.00000000000001,380 183.0,380" fill="#4d8c2f"/><polygon points="120,226.0 67.5,352.0 172.5,352.0" fill="#6ab04c"/><polygon points="120,205.0 81.5,324.0 158.5,324.0" fill="#4d8c2f"/><rect x="673.0" y="380" width="14.0" height="28.0" fill="#5a3a26"/><polygon points="680,254.0 617.0,380 743.0,380" fill="#4d8c2f"/><polygon points="680,226.0 627.5,352.0 732.5,352.0" fill="#6ab04c"/><polygon points="680,205.0 641.5,324.0 718.5,324.0" fill="#4d8c2f"/><rect x="385.0" y="380" width="30.0" height="50.0" fill="#8b5a3c"/><circle cx="400" cy="330.0" r="80.0" fill="#4d8c2f"/><circle cx="350.0" cy="350.0" r="55.0" fill="#6ab04c"/><circle cx="450.0" cy="350.0" r="55.0" fill="#6ab04c"/><circle cx="400" cy="280.0" r="55.0" fill="#6ab04c"/>
+<!-- znak parku -->
+<g transform="translate(400,420)">
+  <rect x="-110" y="-30" width="220" height="80" fill="#8b5a3c" stroke="#5a3a26" stroke-width="3" rx="5"/>
+  <rect x="-100" y="-20" width="200" height="60" fill="#ffe066"/>
+  <text x="0" y="-2" text-anchor="middle" font-family="Comic Sans MS" font-size="16" font-weight="bold" fill="#5a3a26">PARK</text>
+  <text x="0" y="22" text-anchor="middle" font-family="Comic Sans MS" font-size="16" font-weight="bold" fill="#5a3a26">NARODOWY</text>
+  <!-- słupek -->
+  <rect x="-8" y="50" width="16" height="60" fill="#8b5a3c"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">park narodowy</text>
+</svg>

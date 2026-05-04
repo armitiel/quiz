@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="#1a3a5c"/><circle cx="650" cy="120" r="55" fill="#ffe066" opacity="0.9"/><circle cx="650" cy="120" r="42" fill="#ffffff"/><circle cx="635" cy="105" r="18" fill="#1a3a5c"/><rect y="430" width="800" height="170" fill="#4d8c2f"/>
+<g transform="translate(150,200)">
+  <!-- gwiazdki -->
+  <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+  <circle cx="80" cy="40" r="1.5" fill="#ffffff"/>
+  <circle cx="500" cy="20" r="2" fill="#ffffff"/>
+  <circle cx="450" cy="80" r="1.5" fill="#ffffff"/>
+  <circle cx="50" cy="100" r="1" fill="#ffffff"/>
+  <circle cx="600" cy="50" r="1.5" fill="#ffffff"/>
+</g>
+<!-- gałąź -->
+<rect x="100" y="430" width="600" height="20" fill="#5a3a26"/>
+<g transform="translate(400,400)">
+  <!-- ciało sowy -->
+  <ellipse cx="0" cy="0" rx="100" ry="120" fill="#6b4423"/>
+  <ellipse cx="0" cy="40" rx="60" ry="50" fill="#ffe066" opacity="0.7"/>
+  <!-- "uszy" -->
+  <polygon points="-70,-100 -45,-130 -30,-95" fill="#3d2814"/>
+  <polygon points="70,-100 45,-130 30,-95" fill="#3d2814"/>
+  <!-- oczy -->
+  <circle cx="-30" cy="-30" r="35" fill="#ffffff"/>
+  <circle cx="30" cy="-30" r="35" fill="#ffffff"/>
+  <circle cx="-30" cy="-30" r="22" fill="#ffd93d"/>
+  <circle cx="30" cy="-30" r="22" fill="#ffd93d"/>
+  <circle cx="-30" cy="-30" r="14" fill="#2c3e50"/>
+  <circle cx="30" cy="-30" r="14" fill="#2c3e50"/>
+  <circle cx="-26" cy="-34" r="4" fill="#ffffff"/>
+  <circle cx="34" cy="-34" r="4" fill="#ffffff"/>
+  <!-- dziób -->
+  <polygon points="-10,10 0,30 10,10" fill="#ffd93d"/>
+  <!-- pierze - łuski -->
+  <g fill="#3d2814" opacity="0.6">
+    <ellipse cx="-40" cy="20" rx="15" ry="8"/>
+    <ellipse cx="0" cy="30" rx="15" ry="8"/>
+    <ellipse cx="40" cy="20" rx="15" ry="8"/>
+    <ellipse cx="-30" cy="60" rx="15" ry="8"/>
+    <ellipse cx="30" cy="60" rx="15" ry="8"/>
+  </g>
+  <!-- nogi -->
+  <rect x="-15" y="115" width="8" height="20" fill="#ffd93d"/>
+  <rect x="7" y="115" width="8" height="20" fill="#ffd93d"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#ffffff">sowa nocą</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<g transform="translate(400,300)">
+  <path d="M0,-150 L-20,-100 L-50,-110 L-30,-70 L-90,-50 L-50,-20 L-100,30 L-50,40 L-30,90 L-10,60 L0,120 L10,60 L30,90 L50,40 L100,30 L50,-20 L90,-50 L30,-70 L50,-110 L20,-100 Z"
+        fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <!-- żyłki -->
+  <line x1="0" y1="-130" x2="0" y2="100" stroke="#c0392b" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="0" x2="-60" y2="-30" stroke="#c0392b" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="0" x2="60" y2="-30" stroke="#c0392b" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="0" x2="-50" y2="40" stroke="#c0392b" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="0" x2="50" y2="40" stroke="#c0392b" stroke-width="2" opacity="0.6"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">liść klonu</text>
+</svg>

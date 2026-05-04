@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/><rect x="691.0" y="380" width="18.0" height="30.0" fill="#8b5a3c"/><circle cx="700" cy="350.0" r="48.0" fill="#4d8c2f"/><circle cx="670.0" cy="362.0" r="33.0" fill="#6ab04c"/><circle cx="730.0" cy="362.0" r="33.0" fill="#6ab04c"/><circle cx="700" cy="320.0" r="33.0" fill="#6ab04c"/>
+<g transform="translate(380,400)">
+  <!-- ogon -->
+  <path d="M70,0 Q150,-20 170,-80 Q120,-50 80,-20 Z" fill="#e67e22"/>
+  <path d="M150,-50 Q160,-65 165,-75 L155,-65 Z" fill="#ffffff"/>
+  <!-- ciało -->
+  <ellipse cx="0" cy="0" rx="80" ry="45" fill="#e67e22"/>
+  <ellipse cx="-10" cy="20" rx="40" ry="20" fill="#ffffff"/>
+  <!-- nogi -->
+  <rect x="-50" y="35" width="14" height="35" fill="#c0392b"/>
+  <rect x="-20" y="35" width="14" height="35" fill="#c0392b"/>
+  <rect x="20" y="35" width="14" height="35" fill="#c0392b"/>
+  <rect x="50" y="35" width="14" height="35" fill="#c0392b"/>
+  <!-- głowa -->
+  <circle cx="-70" cy="-20" r="40" fill="#e67e22"/>
+  <polygon points="-100,-50 -90,-75 -75,-55" fill="#e67e22"/>
+  <polygon points="-95,-55 -88,-67 -82,-58" fill="#c0392b"/>
+  <polygon points="-50,-50 -60,-75 -45,-55" fill="#e67e22"/>
+  <polygon points="-55,-55 -53,-67 -48,-58" fill="#c0392b"/>
+  <polygon points="-100,-15 -120,-15 -100,5" fill="#ffffff"/>
+  <polygon points="-100,-15 -120,-5 -110,15" fill="#e67e22"/>
+  <circle cx="-115" cy="-10" r="4" fill="#2c3e50"/>
+  <circle cx="-85" cy="-25" r="4" fill="#2c3e50"/>
+  <circle cx="-65" cy="-25" r="4" fill="#2c3e50"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">lis rudy</text>
+</svg>

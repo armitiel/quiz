@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<g transform="translate(400,420)">
+  <!-- borowik -->
+  <ellipse cx="0" cy="-30" rx="120" ry="60" fill="#6b4423"/>
+  <ellipse cx="0" cy="-40" rx="100" ry="40" fill="#3d2814"/>
+  <rect x="-30" y="-30" width="60" height="100" fill="#ffe066" rx="8"/>
+  <ellipse cx="0" cy="70" rx="40" ry="10" fill="#ffd93d"/>
+</g>
+<!-- mech wokół -->
+<g fill="#6ab04c">
+  <ellipse cx="200" cy="500" rx="40" ry="8"/>
+  <ellipse cx="600" cy="510" rx="50" ry="8"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">borowik szlachetny</text>
+</svg>

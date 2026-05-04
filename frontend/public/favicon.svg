@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="100%" stop-color="#a8e6a3"/>
+    </linearGradient>
+    <linearGradient id="trunk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5a3c"/>
+      <stop offset="100%" stop-color="#5a3a26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tło z zaokrąglonymi rogami (iOS i tak dorzuci swoje, ale wygląda lepiej) -->
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#sky)"/>
+
+  <!-- Słońce -->
+  <circle cx="380" cy="120" r="50" fill="#ffd93d"/>
+  <circle cx="380" cy="120" r="38" fill="#ffe066"/>
+
+  <!-- Trawa - dolny łuk -->
+  <path d="M0,400 Q256,360 512,400 L512,512 L0,512 Z" fill="#6ab04c"/>
+
+  <!-- Drzewo iglaste (świerk) z lewej -->
+  <g transform="translate(120, 380)">
+    <rect x="-15" y="0" width="30" height="50" fill="url(#trunk)"/>
+    <polygon points="0,-180 -90,0 90,0" fill="#2d5016"/>
+    <polygon points="0,-220 -75,-40 75,-40" fill="#3d6e26"/>
+    <polygon points="0,-250 -55,-80 55,-80" fill="#4d8c2f"/>
+  </g>
+
+  <!-- Drzewo liściaste (dąb) ze środka -->
+  <g transform="translate(290, 380)">
+    <rect x="-20" y="0" width="40" height="60" fill="url(#trunk)"/>
+    <circle cx="0" cy="-50" r="80" fill="#4d8c2f"/>
+    <circle cx="-50" cy="-30" r="55" fill="#6ab04c"/>
+    <circle cx="50" cy="-30" r="55" fill="#6ab04c"/>
+    <circle cx="0" cy="-100" r="55" fill="#6ab04c"/>
+  </g>
+
+  <!-- Małe drzewo z prawej -->
+  <g transform="translate(430, 410)">
+    <rect x="-10" y="0" width="20" height="35" fill="url(#trunk)"/>
+    <polygon points="0,-110 -55,0 55,0" fill="#3d6e26"/>
+    <polygon points="0,-140 -42,-25 42,-25" fill="#4d8c2f"/>
+  </g>
+
+  <!-- Grzybek na trawie -->
+  <g transform="translate(70, 470)">
+    <ellipse cx="0" cy="0" rx="20" ry="12" fill="#e74c3c"/>
+    <circle cx="-7" cy="-2" r="3" fill="white"/>
+    <circle cx="6" cy="-3" r="2.5" fill="white"/>
+    <rect x="-5" y="0" width="10" height="14" fill="#fff"/>
+  </g>
+
+  <!-- Mały lis -->
+  <g transform="translate(220, 460)">
+    <ellipse cx="0" cy="5" rx="14" ry="9" fill="#e67e22"/>
+    <circle cx="0" cy="-4" r="9" fill="#e67e22"/>
+    <polygon points="-7,-12 -4,-3 -10,-5" fill="#e67e22"/>
+    <polygon points="7,-12 4,-3 10,-5" fill="#e67e22"/>
+    <circle cx="-3" cy="-4" r="1.5" fill="black"/>
+    <circle cx="3" cy="-4" r="1.5" fill="black"/>
+    <ellipse cx="0" cy="0" rx="2" ry="1.5" fill="black"/>
+  </g>
+
+  <!-- Tekst "QUIZ" na dole -->
+  <text x="256" y="290" text-anchor="middle"
+        font-family="Comic Sans MS, sans-serif"
+        font-weight="bold"
+        font-size="80"
+        fill="#2d5016"
+        stroke="#ffd93d"
+        stroke-width="3">QUIZ</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/><rect x="673.0" y="380" width="14.0" height="28.0" fill="#5a3a26"/><polygon points="680,254.0 617.0,380 743.0,380" fill="#4d8c2f"/><polygon points="680,226.0 627.5,352.0 732.5,352.0" fill="#6ab04c"/><polygon points="680,205.0 641.5,324.0 718.5,324.0" fill="#4d8c2f"/>
+<g transform="translate(380,330)">
+  <!-- ciało -->
+  <ellipse cx="0" cy="40" rx="120" ry="55" fill="#6b4423"/>
+  <ellipse cx="0" cy="60" rx="100" ry="30" fill="#ffe066"/>
+  <!-- nogi -->
+  <rect x="-90" y="80" width="14" height="60" fill="#3d2814"/>
+  <rect x="-50" y="80" width="14" height="60" fill="#3d2814"/>
+  <rect x="40" y="80" width="14" height="60" fill="#3d2814"/>
+  <rect x="80" y="80" width="14" height="60" fill="#3d2814"/>
+  <!-- szyja i głowa -->
+  <path d="M85,30 L120,-20 L160,-30 L150,30 Z" fill="#6b4423"/>
+  <ellipse cx="160" cy="-10" rx="35" ry="25" fill="#6b4423"/>
+  <ellipse cx="180" cy="-5" rx="15" ry="10" fill="#3d2814"/>
+  <circle cx="170" cy="-15" r="3" fill="#2c3e50"/>
+  <!-- poroże -->
+  <path d="M150,-30 Q145,-55 155,-70 M155,-70 Q170,-75 175,-65" stroke="#5a3a26" stroke-width="5" fill="none"/>
+  <path d="M170,-30 Q175,-55 165,-70 M165,-70 Q150,-75 145,-65" stroke="#5a3a26" stroke-width="5" fill="none"/>
+  <!-- ucho -->
+  <ellipse cx="145" cy="-35" rx="8" ry="14" fill="#3d2814"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">sarna (kozioł)</text>
+</svg>

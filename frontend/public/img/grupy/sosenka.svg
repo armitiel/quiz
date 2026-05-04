@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<circle cx="200" cy="200" r="180" fill="#87ceeb" stroke="#5a3a26" stroke-width="12"/>
+
+<g transform="translate(200,210)">
+  <!-- pień -->
+  <rect x="-15" y="80" width="30" height="60" fill="#5a3a26" stroke="#3d2814" stroke-width="3"/>
+  <!-- 3 trójkąty -->
+  <polygon points="0,-130 -110,80 110,80" fill="#2d5016" stroke="#1a3009" stroke-width="3"/>
+  <polygon points="0,-160 -90,30 90,30" fill="#3d6e26" stroke="#1a3009" stroke-width="3"/>
+  <polygon points="0,-180 -65,-40 65,-40" fill="#4d8c2f" stroke="#1a3009" stroke-width="3"/>
+  <!-- bombki/szyszki -->
+  <ellipse cx="-50" cy="40" rx="8" ry="12" fill="#8b5a3c"/>
+  <ellipse cx="55" cy="20" rx="8" ry="12" fill="#8b5a3c"/>
+  <ellipse cx="-30" cy="-50" rx="7" ry="10" fill="#8b5a3c"/>
+  <!-- gwiazdka na czubku -->
+  <polygon points="0,-180 5,-165 20,-165 8,-155 12,-140 0,-150 -12,-140 -8,-155 -20,-165 -5,-165"
+           fill="#ffd93d" stroke="#3d2814" stroke-width="2"/>
+</g>
+
+</svg>

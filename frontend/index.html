@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Leśny Quiz</title>
+
+    <!-- Theme color (pasek statusu na iOS w trybie standalone) -->
+    <meta name="theme-color" content="#5BA84C" />
+
+    <!-- Font Fredoka z Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- iOS PWA - kluczowe meta tagi dla "Dodaj do ekranu początkowego" -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Leśny Quiz" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Ikony iOS (apple-touch-icon dla różnych rozmiarów) -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Splash screen iOS - opcjonalne, doda graficzną planszę startową -->
+    <link rel="apple-touch-startup-image" href="/splash-2048x1536.png"
+          media="(device-width: 1024px) and (device-height: 768px) and (orientation: landscape)" />
+  </head>
+  <body class="font-kid overscroll-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

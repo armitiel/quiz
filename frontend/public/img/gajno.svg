@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<g transform="translate(400,380)">
+  <!-- pień -->
+  <rect x="-30" y="-50" width="60" height="250" fill="#8b5a3c"/>
+  <line x1="-15" y1="-50" x2="-15" y2="200" stroke="#5a3a26" stroke-width="2"/>
+  <line x1="10" y1="-50" x2="10" y2="200" stroke="#5a3a26" stroke-width="2"/>
+  <!-- gałęzie -->
+  <line x1="0" y1="-30" x2="-130" y2="-100" stroke="#8b5a3c" stroke-width="14"/>
+  <line x1="0" y1="-50" x2="130" y2="-100" stroke="#8b5a3c" stroke-width="14"/>
+  <line x1="0" y1="-100" x2="60" y2="-180" stroke="#8b5a3c" stroke-width="10"/>
+  <!-- gajno - kula z patyków -->
+  <g transform="translate(70,-150)">
+    <ellipse cx="0" cy="0" rx="80" ry="65" fill="#5a3a26"/>
+    <line x1="-60" y1="-30" x2="40" y2="-50" stroke="#8b5a3c" stroke-width="3"/>
+    <line x1="-50" y1="20" x2="60" y2="0" stroke="#8b5a3c" stroke-width="3"/>
+    <line x1="-30" y1="-50" x2="50" y2="-30" stroke="#8b5a3c" stroke-width="3"/>
+    <line x1="-70" y1="0" x2="30" y2="40" stroke="#8b5a3c" stroke-width="3"/>
+    <line x1="-40" y1="50" x2="70" y2="30" stroke="#8b5a3c" stroke-width="3"/>
+    <!-- liście wystające -->
+    <circle cx="-50" cy="-40" r="8" fill="#4d8c2f"/>
+    <circle cx="55" cy="-45" r="8" fill="#6ab04c"/>
+    <circle cx="60" cy="40" r="8" fill="#4d8c2f"/>
+    <!-- wiewiórka wystaje -->
+    <circle cx="0" cy="-10" r="15" fill="#e67e22"/>
+    <circle cx="-5" cy="-15" r="3" fill="#2c3e50"/>
+    <circle cx="5" cy="-15" r="3" fill="#2c3e50"/>
+    <polygon points="-12,-25 -8,-32 -4,-25" fill="#e67e22"/>
+    <polygon points="4,-25 8,-32 12,-25" fill="#e67e22"/>
+  </g>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">gajno - gniazdo wiewiórki</text>
+</svg>

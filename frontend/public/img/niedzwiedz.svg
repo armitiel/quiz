@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/><rect x="112.0" y="380" width="16.0" height="32.0" fill="#5a3a26"/><polygon points="120,236.0 48.0,380 192.0,380" fill="#4d8c2f"/><polygon points="120,204.0 60.0,348.0 180.0,348.0" fill="#6ab04c"/><polygon points="120,180.0 76.0,316.0 164.0,316.0" fill="#4d8c2f"/><rect x="689.5" y="380" width="21.0" height="35.0" fill="#8b5a3c"/><circle cx="700" cy="345.0" r="56.0" fill="#4d8c2f"/><circle cx="665.0" cy="359.0" r="38.5" fill="#6ab04c"/><circle cx="735.0" cy="359.0" r="38.5" fill="#6ab04c"/><circle cx="700" cy="310.0" r="38.5" fill="#6ab04c"/>
+<g transform="translate(400,400)">
+  <ellipse cx="0" cy="40" rx="120" ry="80" fill="#6b4423"/>
+  <ellipse cx="-90" cy="100" rx="25" ry="25" fill="#3d2814"/>
+  <ellipse cx="90" cy="100" rx="25" ry="25" fill="#3d2814"/>
+  <circle cx="0" cy="-40" r="70" fill="#6b4423"/>
+  <ellipse cx="-50" cy="-90" rx="20" ry="22" fill="#6b4423"/>
+  <ellipse cx="50" cy="-90" rx="20" ry="22" fill="#6b4423"/>
+  <circle cx="-50" cy="-90" r="10" fill="#3d2814"/>
+  <circle cx="50" cy="-90" r="10" fill="#3d2814"/>
+  <ellipse cx="0" cy="-15" rx="25" ry="20" fill="#3d2814"/>
+  <circle cx="-15" cy="-50" r="5" fill="#2c3e50"/>
+  <circle cx="15" cy="-50" r="5" fill="#2c3e50"/>
+  <ellipse cx="0" cy="-20" rx="8" ry="6" fill="#2c3e50"/>
+  <path d="M-10,-10 Q0,-5 10,-10" stroke="#2c3e50" stroke-width="3" fill="none"/>
+</g>
+<text x="400" y="560" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="24" font-weight="bold" fill="#5a3a26">niedźwiedź brunatny</text>
+</svg>

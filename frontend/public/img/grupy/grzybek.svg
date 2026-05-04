@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<circle cx="200" cy="200" r="180" fill="#a8e6a3" stroke="#5a3a26" stroke-width="12"/>
+
+<g transform="translate(200,220)">
+  <!-- nóżka -->
+  <rect x="-30" y="0" width="60" height="100" fill="white" stroke="#5a3a26" stroke-width="4" rx="6"/>
+  <!-- kapelusz -->
+  <ellipse cx="0" cy="-30" rx="120" ry="80" fill="#e74c3c" stroke="#5a3a26" stroke-width="4"/>
+  <ellipse cx="0" cy="-50" rx="100" ry="50" fill="#e74c3c"/>
+  <!-- kropki -->
+  <circle cx="-50" cy="-50" r="14" fill="white"/>
+  <circle cx="40" cy="-65" r="16" fill="white"/>
+  <circle cx="-15" cy="-30" r="11" fill="white"/>
+  <circle cx="60" cy="-30" r="13" fill="white"/>
+  <circle cx="-80" cy="-25" r="10" fill="white"/>
+  <circle cx="0" cy="-75" r="11" fill="white"/>
+  <!-- twarzyczka na nóżce -->
+  <circle cx="-10" cy="40" r="4" fill="#5a3a26"/>
+  <circle cx="10" cy="40" r="4" fill="#5a3a26"/>
+  <path d="M-8,60 Q0,68 8,60" stroke="#5a3a26" stroke-width="3" fill="none"/>
+</g>
+
+</svg>

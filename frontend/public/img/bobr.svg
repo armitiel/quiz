@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<rect y="430" width="800" height="170" fill="#5dade2"/>
+<path d="M0,430 Q200,420 400,430 T800,430" stroke="#3498db" stroke-width="3" fill="none" opacity="0.6"/>
+<g transform="translate(450,380)">
+  <!-- żeremie -->
+  <ellipse cx="0" cy="40" rx="180" ry="60" fill="#5a3a26"/>
+  <line x1="-150" y1="20" x2="150" y2="20" stroke="#8b5a3c" stroke-width="6"/>
+  <line x1="-130" y1="40" x2="130" y2="60" stroke="#8b5a3c" stroke-width="5"/>
+  <line x1="-100" y1="60" x2="100" y2="40" stroke="#8b5a3c" stroke-width="4"/>
+</g>
+<g transform="translate(220,410)">
+  <ellipse cx="0" cy="0" rx="80" ry="45" fill="#3d2814"/>
+  <circle cx="-60" cy="-15" r="35" fill="#3d2814"/>
+  <circle cx="-75" cy="-25" r="6" fill="#6b4423"/>
+  <circle cx="-55" cy="-25" r="6" fill="#6b4423"/>
+  <circle cx="-78" cy="-25" r="3" fill="#2c3e50"/>
+  <circle cx="-58" cy="-25" r="3" fill="#2c3e50"/>
+  <ellipse cx="-85" cy="-10" rx="10" ry="6" fill="#ffffff"/>
+  <rect x="-92" y="-12" width="14" height="6" fill="#ffd93d"/>
+  <ellipse cx="60" cy="20" rx="50" ry="20" fill="#6b4423"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">bóbr i żeremie</text>
+</svg>

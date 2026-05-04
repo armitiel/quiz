@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#b8e6b8"/></linearGradient></defs><rect width="800" height="600" fill="url(#sky)"/><path d="M0,400 Q400,360 800,400 L800,600 L0,600 Z" fill="#6ab04c"/><ellipse cx="650" cy="120" rx="50" ry="50" fill="#ffe066"/><ellipse cx="650" cy="120" rx="38" ry="38" fill="#ffd93d"/>
+<g transform="translate(400,300)">
+  <!-- ciało -->
+  <ellipse cx="0" cy="50" rx="140" ry="65" fill="#6b4423"/>
+  <ellipse cx="0" cy="75" rx="110" ry="35" fill="#ffe066"/>
+  <!-- nogi długie -->
+  <rect x="-110" y="100" width="16" height="100" fill="#3d2814"/>
+  <rect x="-65" y="100" width="16" height="100" fill="#3d2814"/>
+  <rect x="50" y="100" width="16" height="100" fill="#3d2814"/>
+  <rect x="95" y="100" width="16" height="100" fill="#3d2814"/>
+  <!-- szyja, głowa -->
+  <path d="M100,30 L140,-50 L195,-60 L185,30 Z" fill="#6b4423"/>
+  <ellipse cx="190" cy="-40" rx="40" ry="28" fill="#6b4423"/>
+  <circle cx="200" cy="-45" r="4" fill="#2c3e50"/>
+  <ellipse cx="215" cy="-30" rx="10" ry="6" fill="#3d2814"/>
+  <!-- WIELKIE poroże -->
+  <g stroke="#5a3a26" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M170,-65 Q160,-110 130,-130 M130,-130 L100,-140"/>
+    <path d="M170,-65 Q145,-95 115,-110"/>
+    <path d="M170,-65 Q175,-95 200,-110"/>
+    <path d="M195,-65 Q210,-110 240,-130 M240,-130 L270,-140"/>
+    <path d="M195,-65 Q220,-95 255,-110"/>
+    <path d="M195,-65 Q190,-95 165,-110"/>
+  </g>
+  <ellipse cx="170" cy="-65" rx="15" ry="8" fill="#3d2814"/>
+  <ellipse cx="195" cy="-65" rx="15" ry="8" fill="#3d2814"/>
+</g>
+<text x="400" y="565" text-anchor="middle" font-family="Comic Sans MS" font-size="24" font-weight="bold" fill="#5a3a26">jeleń - król lasu</text>
+</svg>
